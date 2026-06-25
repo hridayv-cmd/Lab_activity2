@@ -8,17 +8,17 @@ Date: June 24 2026
 import random
 
 class Coin:
-    def __init__(self):
+    def __init__(self) -> None:
         """Initializes the coin and determines its initial side up."""
-        self.__sideup = 'Heads'
-        self.toss()  # Automatically toss to randomize the initial state
-    def toss(self):
+        self.__sideup: str = 'Heads'
+        self.toss()  
+    def toss(self) -> None:
         """Generates a random choice and sets __sideup to 'Heads' or 'Tails'."""
         if random.randint(0, 1) == 0:
             self.__sideup = 'Heads'
         else:
             self.__sideup = 'Tails'
 
-    def get_sideup(self):
+    def get_sideup(self) -> str:
         """Returns the current value of __sideup."""
         return self.__sideup
